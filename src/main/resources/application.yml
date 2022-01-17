@@ -1,2 +1,7 @@
 server:
   port: 9000
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:ASD}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:root}
