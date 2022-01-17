@@ -2,6 +2,10 @@ server:
   port: 9000
 spring:
   datasource:
-    url: ${SPRING_DATASOURCE_URL:ASD}
+    url: ${SPRING_DATASOURCE_URL:postgres://gmjnmqfzgshgnw:46f3d1f6875efc68a62b5ba818a2965d2b58d306dcc573d092dd40114372d8b6@ec2-34-230-198-12.compute-1.amazonaws.com:5432/d97na6e2kmdsk4}
     username: ${SPRING_DATASOURCE_USERNAME:postgres}
     password: ${SPRING_DATASOURCE_PASSWORD:root}
+    driver-class-name: org.postgresql.Driver
+    tomcat:
+      max-active: ${DATASOURCE_MAXIMUM_POOL_SIZE:10}
+      remove-abandoned: ${DATASOURCE_REMOVE_ABANDONED:true}
